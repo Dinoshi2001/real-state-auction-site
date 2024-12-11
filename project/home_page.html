@@ -1,0 +1,572 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>RealBidz - Auction Website </title>
+
+<!-- jQuery -->
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+
+  
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.2/css/bootstrap.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.2/js/bootstrap.bundle.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-***" crossorigin="anonymous" />
+
+  <style>
+
+  /*navigation bar start css*/
+    .navbar-custom {
+      background-color: #00008B; /* Dark Blue */
+      color: #ffffff; /* Text color */
+    }
+    .navbar-custom .navbar-nav .nav-link {
+      color: #ffffff; /* Link text color */
+    }
+
+    /*navigation bar end css*/
+
+    /*footer css code start*/
+
+    .footer {
+      background-color: #00008B; /* Dark Blue */
+      color: #ffffff; /* Text color */
+    }
+
+    .footer a{
+      text-decoration: none;
+      color: white;
+      font-size: 18px;
+    }
+
+    /*footer css code end*/
+
+    /*slide show image code start*/
+
+    .carousel-item img {
+  filter: none;
+}
+
+.carousel-caption h3 {
+    font-size: 58px;
+  }
+
+  /*slide show image code end*/
+
+  /*auction part start css*/
+
+   .auction-list {
+      margin-top: 20px;
+    }
+
+    /*auction part end css*/
+
+     .custom-margin {
+      margin-right: 10px;}
+/*css of counting part*/
+
+      .col h1 {
+  color: darkblue;
+  text-align: center;
+}
+
+.count {
+  width: 50px; /* Adjust the width to your desired value */
+  margin: 0 auto; /* Center the elements horizontally */
+  text-align: center;
+}
+  </style>
+
+</head>
+
+<body>
+
+  <!--navigation bar-->
+<nav class="navbar navbar-expand-lg navbar-custom">
+  <img style="height: 40px; width: 100px;" src="images/logo2.jpg">
+  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav">
+      <li class="nav-item active">
+        <a class="nav-link" href="home_page.html">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="aboutus.html">About Us</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="services.html">Services</a>
+      </li>
+      
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          Properties
+        </a>
+        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <li><a class="dropdown-item" href="buildings.html">Buildings</a></li>
+          <li><a class="dropdown-item" href="houses.html">Houses</a></li>
+          <li><a class="dropdown-item" href="lands.html">Lands</a></li>
+        </ul>
+      </li>
+      
+      <li class="nav-item">
+        <a class="nav-link" href="sell_property.php">Sell property</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="contactus.php">Contact Us</a>
+      </li>
+      
+    </ul>
+  </div>
+  
+</nav>
+<!--navigation bar end-->
+
+
+<!--slide show-->
+
+<div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
+  <ol class="carousel-indicators">
+    <li data-bs-target="#carouselExample" data-bs-slide-to="0" class="active"></li>
+    <li data-bs-target="#carouselExample" data-bs-slide-to="1"></li>
+    <li data-bs-target="#carouselExample" data-bs-slide-to="2"></li>
+  </ol>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img style="height:700px;" src="images/image2.jpeg" class="d-block w-100" alt="Image 1">
+      <div class="carousel-caption">
+        <h3>WE ARE RealBidz</h3>
+        <p>Find your dream state with us.</p>
+     <!---  <a href="login-form.html" class="btn btn-danger">Log In</a>
+        <a href="sign_up.html" class="btn btn-danger">Register</a> -->
+
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img style="height: 700px;" src="images/image3.jpeg" class="d-block w-100" alt="Image 2">
+      <div class="carousel-caption">
+        <h3>WE ARE RealBidz</h3>
+        <p>Find your dream state with us.</p>
+     <!---    <a href="login-form.html" class="btn btn-danger">Log In</a>
+        <a href="sign_up.html" class="btn btn-danger">Register</a> -->
+
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img style="height: 700px;" src="images/image4.jpeg" class="d-block w-100" alt="Image 3">
+      <div class="carousel-caption">
+        <h3>WE ARE RealBidz</h3>
+        <p>Find your dream state with us.</p>
+       <!---  <a href="login-form.html" class="btn btn-danger">Log In</a>
+        <a href="sign_up.html" class="btn btn-danger">Register</a> --->
+
+      </div>
+    </div>
+  </div>
+  <a class="carousel-control-prev" href="#carouselExample" role="button" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </a>
+  <a class="carousel-control-next" href="#carouselExample" role="button" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </a>
+</div>
+
+<!--slide show end-->
+
+<!--adding text start-->
+
+
+<div style="padding: 80px;" class="container">
+    <div class="row">
+      <div class="col-9">
+        <h1 class="mb-4">Latest properties</h1>
+      </div>
+      <div class="col-3 d-flex justify-content-end">
+        <button style="font-size: 20px; width:400px; background-color: darkblue; border-radius:50px ;" class="btn btn-primary custom-margin">view all properties</button>
+
+      </div>
+    </div>
+  </div>
+
+<!--adding text end-->
+
+
+<!--Adding auctions-->
+
+ 
+     <div class="container">
+    <div style="margin-top: 40px; margin-bottom: 40px;" class="row">
+      <div class="col-md-4">
+        <div class="card">
+          <img style="height:250px;" src="images/image2.jpeg" class="card-img-top" alt="Auction Item 1">
+          <div class="card-body">
+            <h5 class="card-title">Houses</h5>
+            <p class="card-text">Remaining Time: <span id="remaining-time1">00:00:00</span></p>
+            <div class="row">
+              <div class="col">
+                <p>Bid 1: $100</p>
+              </div>
+              <div class="col">
+                <p>Bid 2: $150</p>
+              </div>
+              <div class="col">
+                <p>Bid 3: $200</p>
+              </div>
+              <p>this appartment is situated in colombo.there are 20 floors with highest facilities</p>
+
+
+            </div>
+            <button class="btn btn-primary">More Details</button>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card">
+          <img style="height:250px;" src="images/image3.jpeg" class="card-img-top" alt="Auction Item 2">
+          <div class="card-body">
+            <h5 class="card-title">Buildings</h5>
+            <p class="card-text">Remaining Time: <span id="remaining-time2">00:00:00</span></p>
+            <div class="row">
+              <div class="col">
+                <p>Bid 1: $120</p>
+              </div>
+              <div class="col">
+                <p>Bid 2: $180</p>
+              </div>
+              <div class="col">
+                <p>Bid 3: $250</p>
+              </div>
+              <p>this appartment is situated in colombo.there are 20 floors with highest facilities</p>
+            </div>
+            <button class="btn btn-primary">More Details</button>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card">
+          <img style="height:250px;" src="images/image4.jpeg" class="card-img-top" alt="Auction Item 3">
+          <div class="card-body">
+            <h5 class="card-title">Lands</h5>
+            <p class="card-text">Remaining Time: <span id="remaining-time3">00:00:00</span></p>
+            <div class="row">
+              <div class="col">
+                <p>Bid 1: $150</p>
+              </div>
+              <div class="col">
+                <p>Bid 2: $200</p>
+              </div>
+              <div class="col">
+                <p>Bid 3: $300</p>
+              </div>
+              <p>this appartment is situated in colombo.there are 20 floors with highest facilities</p>
+            </div>
+            <button class="btn btn-primary">More Details</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bootstrap JS -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+  <!-- Remaining Time Countdown Scripts -->
+  <script>
+    // Set the auction end times (YYYY-MM-DD HH:MM:SS)
+    var auctionEndTime1 = '2023-07-10 00:00:00';
+    var auctionEndTime2 = '2023-07-11 00:00:00';
+    var auctionEndTime3 = '2023-07-12 00:00:00';
+
+    function updateRemainingTime1() {
+      updateRemainingTime(auctionEndTime1, 'remaining-time1');
+    }
+
+    function updateRemainingTime2() {
+      updateRemainingTime(auctionEndTime2, 'remaining-time2');
+    }
+
+    function updateRemainingTime3() {
+      updateRemainingTime(auctionEndTime3, 'remaining-time3');
+    }
+
+    function updateRemainingTime(endTime, elementId) {
+      var endTime = new Date(endTime).getTime();
+      var now = new Date().getTime();
+      var timeDifference = endTime - now;
+
+      // Calculate remaining time in days, hours, minutes, and seconds
+      var days = Math.floor(timeDifference / (1000 * 60 * 60 * 24));
+      var hours = Math.floor((timeDifference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      var minutes = Math.floor((timeDifference % (1000 * 60 * 60)) / (1000 * 60));
+      var seconds = Math.floor((timeDifference % (1000 * 60)) / 1000);
+
+      // Display the remaining time
+      document.getElementById(elementId).innerHTML = days + "d " + hours + "h " + minutes + "m " + seconds + "s";
+
+      // Update remaining time every 1 second
+      if (timeDifference > 0) {
+        setTimeout(function() {
+          updateRemainingTime(endTime, elementId);
+        }, 1000);
+      }
+    }
+
+    // Initial calls to update the remaining time
+    updateRemainingTime1();
+    updateRemainingTime2();
+    updateRemainingTime3();
+  </script>
+   
+ <!--end adding auctions-->
+
+<!--start services cards-->
+
+  <section style="background-color:#F3F5FC" id="services" class="py-5">
+    <div class="container">
+   
+      <div class="row">
+        <div class="col-lg-3 col-md-6 mb-4">
+          <div class="card h-100">
+            <img style="width: 150px; height: 100px; margin-left: 50px; margin-top: 40px;" src='images/homeservice1.png' class="card-img-top" alt="Service 1">
+            <div class="card-body">
+              <h5 class="card-title">Quality Properties</h5>
+              <p class="card-text">Spacious and well-maintained property with modern amenities, offering a comfortable and luxurious living experience. This prime real estate boasts high-quality construction, stylish interiors, and a serene environment, making it the perfect place to call home.
+              <p><a style="text-decoration: none;" href="#" class="learn-more">Read more</a></p>
+            </div>
+          </div>
+        </div>
+        <!-- Repeat the card markup for other services -->
+        <div class="col-lg-3 col-md-6 mb-4">
+          <div class="card h-100">
+            <img style="width: 150px; height: 100px; margin-left: 50px; margin-top: 40px;" src="images/homeservice2.png" class="card-img-top" alt="Service 2">
+            <div class="card-body">
+              <h5 class="card-title">Property for sale</h5>
+              <p class="card-text">Stunning property for sale, featuring exquisite design and top-notch craftsmanship. This meticulously maintained home offers a blend of elegance, functionality, and breathtaking views. A rare opportunity to own a truly remarkable property in a sought-after location.</p>
+              <p><a style="text-decoration:none;" href="#" class="learn-more">Read more</a></p>
+            </div>
+          </div>
+        </div>
+        <!-- Repeat the card markup for the remaining services -->
+              <div class="col-lg-3 col-md-6 mb-4">
+                <div class="card h-100">
+                  <img style="width: 150px; height: 100px; margin-top: 40px; margin-left: 50px;" src="images/homeservice3.png" class="card-img-top" alt="Service 1">
+                  <div class="card-body">
+                    <h5 class="card-title">Real State Agent</h5>
+                    <p class="card-text">Experienced real estate agent with a proven track record of success in buying and selling properties. Dedicated to providing personalized service, expert guidance, and exceptional negotiation skills to help clients achieve their real estate goals.                                             </p>
+                    <p><a style="text-decoration:none;" href="#" class="learn-more">Read more</a></p>  
+                </div>
+                </div>
+            </div>
+            <!-- Repeat the card markup for the remaining services -->
+            <div class="col-lg-3 col-md-6 mb-4">
+                <div class="card h-100">
+                  <img style="width: 150px; height: 100px; margin-top: 40px; margin-left: 50px;" src="images/homeservice4.png" class="card-img-top" alt="Service 1">
+                  <div class="card-body">
+                    <h5 class="card-title">Houses For Action</h5>
+                    <p class="card-text">Rare opportunity to bid on a charming house in a desirable location. This character-filled property features unique architectural details and potential for customization. Don't miss your chance to own this distinctive home through an exciting auction event.</p>
+                    <p><a style="text-decoration:none" href="#" class="learn-more">Read more</a></p>  
+                </div>
+                </div>
+            </div>
+              
+                </div>
+                </div>
+            </div>
+          
+                </div>
+                </div>
+            </div>
+      </div>
+    </div>
+  </section>
+
+<!--end services cards-->
+
+<!--start comments section-->
+
+<div style="margin-top:100px;" class="container">
+  <div class="row">
+    <div class="col">
+     <img style="width:200px; height: 200px; border-radius: 100px;" src="images/coment1.jpg"><br><br>
+      <h3>Hasini Fernando</h3><br>
+
+     <b><p>"Participating in the auction on this site was an incredible experience! The platform was user-friendly, and the bidding process was transparent and exciting. I successfully won my dream property at a great price. Highly recommend!"</p></b>
+    </div>
+    <div class="col order-12">
+       <img style="width:200px; height: 200px; border-radius: 100px;" src="images/coment2.jpg"><br><br>
+
+       <b><h3>Indunil Rathnaye</h3><br>
+       <p>"I had a fantastic experience using this auction site to sell my property. The site attracted a wide range of interested buyers, and the competitive bidding resulted in an excellent sale price. The site's support team was responsive and provided exceptional assistance throughout the entire process. Very impressed!"</p></b>
+    </div>
+    <div class="col order-1">
+      <img style="width:200px; height: 200px; border-radius: 100px;" src="images/comment3.jpg"><br><br>
+
+       <h3>jene piris</h3><br>
+      <b><p>"As a first-time bidder on this auction site, I was initially hesitant, but I couldn't be happier with the outcome. The site was intuitive, and the auction listings were comprehensive, making it easy to find the right property. I ended up winning a stunning home at a fantastic value. Highly satisfied and would definitely use this site again."</p></b>
+    </div>
+  </div>
+</div>
+
+<!--end comment section-->
+
+<!--start counting part-->
+<div style="width:1500px;">
+  <div style="background-color:#F9FAFE; padding:50px;" class="row">
+    <div class="col">
+      <h1 class="count">569</h1>
+      <p style="text-align: center;"># of buy buy properties</p>
+    </div>
+    <div class="col">
+      <h1 class="count">446</h1>
+      <p style="text-align: center;">number of sell properties</p>
+    </div>
+    <div class="col">
+      <h1 class="count">3456</h1>
+      <p style="text-align: center;">All of The properties</p>
+    </div>
+    <div class="col">
+      <h1 class="count">300</h1>
+      <p style="text-align: center;">All of the agent</p>
+    </div>
+  </div>
+</div>
+
+
+<!--end counting part-->
+
+<!--final text start-->
+
+
+<div class="final">
+  
+<h1 style="padding:40px; color: darkblue; text-align: center;">Be a part of our growing real state agents</h1><br>
+<center><button style="background-color: #162866; margin-bottom: 50px; border-radius: 100px; width: 400px; padding:20px;" type="button" class="btn btn-primary">Apply for a real agent</button></center>
+
+</final>
+
+<!--final text end-->
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container py-4">
+      <div class="row">
+        <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+         
+          <ul class="list-unstyled">
+            <li>
+              <h4>Join with us</h4>
+            </li>
+            <li>
+             <h6>Real Bidz auctions<br>colombo 07 <br> Sri Lanka</h6>
+            
+            </li>
+
+
+            <li>
+
+              <h6>www.RealBidz@gmail.com</h6>
+            </li>
+            <li>
+              <h6>011-3456223<br>012-3456765</h6>
+            </li>
+            
+            
+          </ul>
+        </div>
+        <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+          
+          <ul class="list-unstyled">
+            <li>
+              <a  href="#!">Home</a>
+            </li>
+            <li>
+              <a href="#!">About Us</a>
+            </li>
+            <li>
+              <a href="#!">Contact Us</a>
+            </li>
+            <li>
+              <a href="#!">Register</a>
+            </li>
+            <li>
+              <a href="#!">Services</a>
+            </li>
+          </ul>
+        </div>
+        <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+         
+          <ul class="list-unstyled">
+            <li>
+              <a href="#!">apartment</a>
+            </li>
+            <li>
+              <a href="#!">Houses</a>
+            </li>
+            <li>
+              <a href="#!">Lands</a>
+            </li>
+            <li>
+              <a href="#!">property</a>
+            </li>
+            <li>
+              <a href="#!">sell property</a>
+            </li>
+          </ul>
+        </div>
+        <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+          
+          <ul class="list-unstyled">
+            <li>
+              
+
+            </li>
+             <a href="https://example.com" target="_blank"><i class="fab fa-facebook"></i> Facebook</a>
+            <li>
+              <a href="https://example.com" target="_blank"><i class="fab fa-twitter"></i> Twitter</a>
+            </li>
+            <li>
+              <a href="https://example.com" target="_blank"><i class="fab fa-instagram"></i> Instagram</a>
+            </li>
+            <li>
+              <a href="https://www.linkedin.com/" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
+            </li>
+            <li>
+              <a href="https://api.whatsapp.com/send?phone=1234567890" target="_blank"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="text-center py-3" style="background-color: #00005A;"> <!-- Dark Blue -->
+      &copy; Copyright RealBidz All Right Reserved.
+    </div>
+  </footer>
+
+<!-- end Footer-->
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
